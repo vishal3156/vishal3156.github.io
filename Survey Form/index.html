@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+        <!-- You should have a page title in an h1 element with an id of title -->
+        <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+        <!-- You should have a short explanation in a p element with an id of description -->
+        <p id="description" class="description text-center">Thank you for taking the time to help us improve the platform</p>
+    </header>
+    <!-- You should have a form element with an id of survey-form -->
+    <form id="survey-form">
+        <!-- Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text -->
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input id="name" type="text" name="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <!-- Inside the form element, you are required to enter your email in an input field that has an id of email. If you enter an email that is not formatted correctly, you will see an HTML5 validation error -->
+        <div class="form-group">
+            <label id="email-label" id="email">Email</label>
+            <input id="email" type="email" name="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <!-- Inside the form, you can enter a number in an input field that has an id of number
+        The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5
+        validation error (depending on your browser).
+        If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will
+        see an HTML5 validation error -->
+        <div class="form-group">
+            <label id="number-label" for="number">Age <small>(optional)</small></label>
+            <input id="number" type="number" name="age" min="13" max="40" class="form-control" placeholder="Age">
+        </div>
+        <!-- Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to
+        choose from -->
+        <div class="form-group">
+            <p>Which option best describes your current role?</p>
+            <select id="dropdown" name="current-role" class="form-control">
+                <option disabled selected value="">Select Current Role</option>
+                <option value="student">Student</option>
+                <option value="full Time Job">Full Time Job</option>
+                <option value="full Time Learner">Full Time Learner</option>
+                <option value="preferNo">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <!-- Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the
+        name attribute -->
+        <div class="form-group radio">
+            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <label><input type="radio" name="recommend" value="definitely" class="input-radio" checked>Definitely</label>
+            <label><input type="radio" name="recommend" value="Maybe" class="input-radio">Maybe</label>
+            <label><input type="radio" name="recommend" value="Not sure" class="input-radio">Not Sure</label>
+        </div>
+        <!-- Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value
+        attribute -->
+        <div class="form-group checkbox">
+            <p>What would you like to see improved? <span class="clue">(Check all that apply)</span></p>
+            <label><input type="checkbox" name="prefer" value="front-end" class="input-checkbox">Front-end Projects</label>
+            <label><input type="checkbox" name="prefer" value="back-end" class="input-checkbox">Back-end Projects</label>
+            <label><input type="checkbox" name="prefer" value="data-visualization" class="input-checkbox">Data Visualization</label>
+            <label><input type="checkbox" name="prefer" value="challenges" class="input-checkbox">Challenges</label>
+        </div>
+        <!-- Inside the form element, you are presented with a textarea for additional comments -->
+        <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+        <!-- Inside the form element, you are presented with a button with id of submit to submit all the inputs -->
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
